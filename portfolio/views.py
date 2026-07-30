@@ -1,18 +1,21 @@
 from django.shortcuts import render
 
-# Create your views here.
 
-def home (request):
+def home(request):
     return render(request, "portfolio/home.html")
 
-def food (request):
+
+def food(request):
     return render(request, "portfolio/food.html")
+
 
 def australia(request):
     return render(request, "portfolio/australia.html")
 
+
 def timeline(request):
     return render(request, "portfolio/timeline.html")
+
 
 def journey(request):
     return render(request, "portfolio/journey.html")
