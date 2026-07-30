@@ -57,7 +57,7 @@
 
     font-family:"Instrument Serif", serif;
 
-    font-size:40px;
+    font-size:60px;
 
     font-weight:400;
 
@@ -79,21 +79,22 @@ h2 {
         .section {
             margin-top: 30px;
         }
-
-  .card {
-    background: #FAF8F4;
-    padding: 25px;
-    border-radius: 20px;
-    margin-top: 25px;
-    border: 1px solid #E8E2D8;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
+.card {
+    background:#FAF8F4;
+    padding:40px;
+    border-radius:20px;
+    margin-top:30px;
+    border:1px solid #E8E2D8;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    text-align:center;
 }
 
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
+
+
 
 .hero {
 
@@ -113,13 +114,11 @@ h2 {
 
 .hero img {
 
-    width:180px;
-
-    height:180px;
-
+    width:400px;
+    height:400px;
     object-fit:cover;
-
     border-radius:50%;
+    margin-bottom:80px;
 
 }
 
@@ -182,24 +181,6 @@ footer {
     margin-bottom: 15px;
 }
 
-.card {
-
-    background:#F7F5F0;
-
-    padding:40px;
-
-    border-radius:4px;
-
-    border:none;
-
-    box-shadow:none;
-
-}
-
-.card:hover img {
-    transform: scale(1.03);
-    transition: 0.3s ease;
-}
 
 .phone-img {
     width: 220px;
@@ -217,12 +198,12 @@ footer {
 
 
 .travel-image{
-    width:100%;
-    max-width:700px;
+    width:300px;
+    height:350px;
+    object-fit:cover;
     display:block;
-    margin:0 auto 30px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    margin:0 auto 15px;
+    border-radius:15px;
 }
 
 
@@ -311,98 +292,24 @@ html{
     scroll-behavior:smooth;
 }
 
-body{
-
-    background:#FAFAF8;
-
-    color:#1E1E1E;
-
-    font-family:"Instrument Serif", serif;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-    letter-spacing:-0.01em;
-
+.card {
+    text-align:center;
 }
 
-<section class="journey-wall">
-
-    <div class="timeline-line"></div>
-
-
-    <article class="gallery-item left">
-
-        <div class="year">
-            2018
-        </div>
-
-
-        <div class="photo-card">
-            <img src="">
-        </div>
-
-
-        <div class="story-card">
-            <h3>Vietnam 🇻🇳</h3>
-            <p>
-            Volunteered teaching children...
-            </p>
-        </div>
-
-    </article>
-
-
-
-    <article class="gallery-item right">
-
-        <div class="year">
-            2019
-        </div>
-
-
-        <div class="photo-card">
-            <img src="">
-        </div>
-
-
-        <div class="story-card">
-            <h3>Petroleum Engineering</h3>
-            <p>
-            Studied in a male dominated field...
-            </p>
-        </div>
-
-    </article>
-
-
-</section>
-
-journeys = [
-
-{
-"year":"2018",
-"age":"18",
-"title":"Vietnam 🇻🇳",
-"image":"images/vietnam.jpg",
-"story":
-"Volunteered teaching children in Vietnam...",
-"position":"left"
-},
-
-
-{
-"year":"2021",
-"age":"21",
-"title":"Australia 🇦🇺",
-"image":"images/australia.jpg",
-"story":
-"Started a new life in Australia...",
-"position":"right"
+.section {
+    margin-top: 60px;
 }
 
-]
+
+.section {
+    margin-top:60px;
+    text-align:center;
+}
+    
+
+.section .card {
+    text-align: center;
+}
 
 </style>
 
@@ -432,14 +339,14 @@ journeys = [
          width="200"
          alt="Po">
 
-    <h1>Hi, I'm Po </h1>
+   <h1>Hi, I'm Po </h1>
+
+</div> <!-- close hero -->
 
 <div class="section" id="about">
 
     <h2>About Me</h2>
 
-    <p>
-   Turning curiosity into real experiences.
 
    </div>
 
@@ -451,7 +358,7 @@ journeys = [
 
 
 
-        <h3><h2>The People Who Shaped My Journey</h2></h3>
+        <h2>The People Who Shaped My Journey</h2>
 
         <p>
        Every chapter of my life has been shaped by the kindness, guidance, and encouragement of the people I have met along the way.
@@ -461,6 +368,7 @@ From teachers to friends, colleagues, volunteers, and strangers who believed in 
 As I look back on this journey, I feel incredibly grateful for every opportunity, every conversation, and every lesson shared with me. This timeline is not only a reflection of my experiences, but also a tribute to the wonderful people who have helped shape the person I continue to become.
         </p>
 
+    </div>
 
     <div class="card">
 
@@ -476,12 +384,8 @@ changing one life at a time."
 <a href="{% url 'journey' %}">Read My Journey →</a>
 
 
-
     </div>
 
-
-    
-</div>
 
           <p>
         <strong>Let's Connect:</strong>
@@ -595,23 +499,8 @@ the places that have inspired me along the way.
 </div>
 
 
-    <div class="section">
 
 
-
-    <div class="card">
-
-
-        <p>
-        As I prepare for my graduate journey, I look forward to continuing to learn, connect with others, and explore new opportunities along the way.
-        </p>
-
-    </div>
-
-</div>
-
-
-</div>
 
 <footer>
 
