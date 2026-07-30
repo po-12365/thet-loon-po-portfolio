@@ -89,6 +89,21 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
+.back-btn {
+    display: inline-block;
+    margin: 40px auto 20px;
+    padding: 12px 25px;
+    background: #5C4B3B;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #7a6551;
+    transform: translateY(-3px);
+}
 
     </style>
 
@@ -395,7 +410,11 @@
 
 </div>
 
-
+<div style="text-align:center; margin-top:40px;">
+    <a href="{% url 'home' %}" class="back-btn">
+        ← Back to Home
+    </a>
+</div>
  
 
 </body>

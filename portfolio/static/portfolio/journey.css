@@ -910,3 +910,19 @@ html {
     margin: 120px auto 80px;
 
 }
+
+.back-btn {
+    display: inline-block;
+    margin: 40px auto 20px;
+    padding: 12px 25px;
+    background: #5C4B3B;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #7a6551;
+    transform: translateY(-3px);
+}
