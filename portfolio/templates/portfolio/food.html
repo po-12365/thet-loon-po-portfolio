@@ -1,0 +1,502 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Po's Coffee Guide</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f8f5ef;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #5C4B3B;
+        }
+
+        h2 {
+            color: #5C4B3B;
+        }
+
+      .card {
+    background: #faf7f2;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+  .card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card img:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.comment-box {
+    background: #faf7f2;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.comment-box textarea {
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+}
+
+
+.comment-box button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background: #5C4B3B;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.comment-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.menu-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 20px;
+    background-color: #5C4B3B;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background-color: #7a6551;
+    transform: translateY(-2px);
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>☕ Po's Coffee Guide</h1>
+
+
+
+    <div class="card">
+
+        <img src="{% static 'portfolio/images/neighbours.jpg' %}" 
+             alt="Neighbours Coffee">
+
+
+        <h2>Neighbours on Market St</h2>
+
+
+        <div class="info">
+
+            <p>
+📍 <strong>Location:</strong><br>
+2 Market St, Newcastle NSW 2300
+</p>
+
+<p>
+📖 <strong>Restaurant Menu</strong>
+</p>
+
+<a class="menu-btn"
+   href="https://www.neighboursonmarketst.com.au/foodmenu"
+   target="_blank">
+   View Menu 🍽️
+</a>
+            <p>
+             <strong>Atmosphere:</strong>
+            Beautiful, warm, and welcoming
+            </p>
+
+
+            <p>
+            ☕ <strong>My Favourite Order:</strong>
+            Mocha
+            </p>
+
+
+            <p>
+             <strong>Best For:</strong>
+            Coffee catch-up, relaxing, enjoying the space
+            </p>
+
+
+            <p>
+            ✍️ <strong>My Experience:</strong><br>
+
+            Every time I visit Neighbours, I love the amazing
+            vibe inside and the beautiful decoration.
+
+            The atmosphere feels comfortable and welcoming.
+            Their coffee is delicious, and my usual order is
+            a mocha, which I always enjoy.
+            </p>
+
+        </div>
+
+    </div>
+
+ <div class="comment-box">
+
+    <h2>💬 Share Your Experience</h2>
+
+    <p>
+          Let me know your experiences too ☕
+    </p>
+
+    <textarea 
+        placeholder="Write your thoughts here..."
+        rows="5">
+    </textarea>
+
+    <br>
+
+    <button>
+        Submit
+    </button>
+
+</div>   
+
+<div class="card">
+
+    <img src="{% static 'portfolio/images/groundfloor.jpg' %}" 
+         alt="Ground Floor Cafe">
+
+
+    <h2>Ground Floor Café</h2>
+
+
+    <div class="info">
+
+<a class="menu-btn"
+   href="https://www.google.com/search?q=ground+floor+cafe+newcastle"
+   target="_blank">
+   View on Google Maps 📍
+</a>
+
+        <p>
+         <strong>Atmosphere:</strong><br>
+        Spacious, comfortable, and study-friendly
+        </p>
+
+
+        <p>
+        ☕ <strong>My Favourite Order:</strong><br>
+        Cappuccino & spinach roll
+        </p>
+
+
+        <p>
+         <strong>Best For:</strong><br>
+        Studying, working on a laptop, and relaxing with coffee
+        </p>
+
+
+        <p>
+        ✍️ <strong>My Experience:</strong><br>
+
+        I really enjoy the spacious interior,
+        which makes it a great place to sit, study, or work
+        on my laptop.
+
+        Their cappuccino is delicious, and I also really enjoy
+        their spinach roll. It is a perfect place for a productive
+        coffee session.
+        </p>
+
+    </div>
+
+ <div class="comment-box">
+
+    <h2>💬 Share Your Experience</h2>
+
+
+    <textarea 
+        placeholder="Write your thoughts here..."
+        rows="5">
+    </textarea>
+
+    <br>
+
+    <button>
+        Submit
+    </button>
+  
+<div class="card">
+
+    <img src="{% static 'portfolio/images/autumnrooms.jpg' %}" 
+         alt="Autumn Rooms Cafe">
+
+
+    <h2>Autumn Rooms</h2>
+
+
+    <div class="info">
+
+        <p>
+        📍 <strong>Location:</strong><br>
+        127 Darby St, Cooks Hill NSW 2300
+        </p>
+
+
+<a class="menu-btn"
+   href="https://www.autumnrooms.com.au/menu"
+   target="_blank">
+   View Menu 🍽️
+</a>
+
+        <p>
+        <strong>Atmosphere:</strong><br>
+        Beautiful, stylish, spacious, and relaxing
+        </p>
+
+
+        <p>
+        ☕ <strong>My Favourite Order:</strong><br>
+        Mocha and banana bread
+        </p>
+
+
+        <p>
+        <strong>Best For:</strong><br>
+        Dates, catching up with friends
+        </p>
+
+
+        <p>
+        ✍️ <strong>My Experience:</strong><br>
+
+        Autumn Rooms is one of my favourite cafés in Newcastle
+        because of its beautiful decoration and unique atmosphere.
+
+        I really enjoy the upstairs area, which feels spacious
+        and comfortable.
+
+        The combination of beautiful design, good coffee, and
+        a welcoming environment makes it a café I would happily
+        recommend.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="comment-box">
+
+    <h2>💬 Share Your Experience</h2>
+
+
+    <textarea 
+        placeholder="Write your thoughts here..."
+        rows="5">
+    </textarea>
+
+    <br>
+
+    <button>
+        Submit
+    </button>
+
+</div>
+
+<div class="card">
+
+    <img src="{% static 'portfolio/images/equium.jpg' %}" 
+         alt="Equium Social Cafe">
+
+
+    <h2>Equium Social</h2>
+
+
+    <div class="info">
+
+        <p>
+        📍 <strong>Location:</strong><br>
+        1/5 Maitland Rd, Mayfield East NSW 2304
+        </p>
+
+
+<a class="menu-btn"
+   href="https://www.equiumsocial.com.au/"
+   target="_blank">
+   View Menu 🍽️
+</a> 
+
+        <p>
+         <strong>Atmosphere:</strong><br>
+        Aesthetic, spacious, and perfect for socialising
+        </p>
+
+
+        <p>
+        ☕ <strong>My Favourite Order:</strong><br>
+        Vietnamese coffee
+        </p>
+
+
+        <p>
+        🍳 <strong>Food Experience:</strong><br>
+        Their breakfast options are also worth trying,
+        with interesting flavours and great presentation.
+        </p>
+
+
+        <p>
+        ✍️ <strong>My Experience:</strong><br>
+
+        It has a great space to spend time with friends,
+        enjoy coffee, and have a relaxing conversation.
+
+        Their coffee is amazing, and my personal favourite
+        is their Vietnamese coffee, which gives a unique
+        experience compared with other cafés.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="comment-box">
+
+    <h2>💬 Share Your Experience</h2>
+
+    <textarea 
+        placeholder="Write your thoughts here..."
+        rows="5">
+    </textarea>
+
+    <br>
+
+    <button>
+        Submit
+    </button>
+
+</div>
+
+<div class="card">
+
+    <img src="{% static 'portfolio/images/goldbergs.jpg' %}" 
+         alt="Goldbergs Coffee House">
+
+
+    <h2>Goldbergs Coffee House</h2>
+
+
+    <div class="info">
+
+        <p>
+        📍 <strong>Location:</strong><br>
+        137 Darby St, Cooks Hill NSW 2300
+        </p>
+
+<a class="menu-btn"
+   href="https://www.instagram.com/goldbergscoffeehouse/?hl=en"
+   target="_blank">
+   Visit Instagram 📸
+</a>
+
+        <p>
+         <strong>Atmosphere:</strong><br>
+        Beautiful indoor and outdoor seating, relaxed and welcoming
+        </p>
+
+
+        <p>
+        ☕ <strong>My Favourite Order:</strong><br>
+        Velvet latte
+        </p>
+
+
+        <p>
+        ✨ <strong>Best For:</strong><br>
+        Large groups, catching up with friends, and good dessert selections 
+        </p>
+
+
+        <p>
+        ✍️ <strong>My Experience:</strong><br>
+
+
+        I really enjoy the atmosphere because they have
+        beautiful indoor and outdoor seating areas, making it
+        a comfortable place for different occasions when I meet with larger groups of friends.
+
+        Their dessert section is also amazing, and it is
+        definitely one of the highlights for me.
+
+        My go-to drink is their velvet latte, and it is one
+        of the reasons I always enjoy coming back.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="comment-box">
+
+    <h2>💬 Share Your Experience</h2>
+
+    <textarea 
+        placeholder="Write your thoughts here..."
+        rows="5">
+    </textarea>
+
+    <br>
+
+    <button>
+        Submit
+    </button>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
