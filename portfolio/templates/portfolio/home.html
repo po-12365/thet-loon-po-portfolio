@@ -356,8 +356,15 @@ html{
     position: fixed;
     inset: 0;
     overflow: hidden;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
+}
+
+.container,
+nav,
+footer {
+    position: relative;
+    z-index: 1;
 }
 
 .key {
@@ -366,7 +373,7 @@ html{
     height: 90px;
     background: white;
     border: 1px solid #ddd;
-    opacity: 0.08;
+    opacity: 0.5;
     animation: floatUp 15s linear infinite;
 }
 
@@ -385,6 +392,14 @@ html{
 
 
 <body>
+
+<div class="piano-bg">
+    <div class="key" style="left:10%; animation-delay:0s;"></div>
+    <div class="key" style="left:25%; animation-delay:2s;"></div>
+    <div class="key" style="left:45%; animation-delay:4s;"></div>
+    <div class="key" style="left:65%; animation-delay:1s;"></div>
+    <div class="key" style="left:85%; animation-delay:5s;"></div>
+</div>
 
 <nav>
 
@@ -564,15 +579,6 @@ the places that have inspired me along the way.
 
 </div>
 
-</div>
-
-
-<div class="piano-bg">
-    <div class="key" style="left:10%; animation-delay:0s;"></div>
-    <div class="key" style="left:25%; animation-delay:2s;"></div>
-    <div class="key" style="left:45%; animation-delay:4s;"></div>
-    <div class="key" style="left:65%; animation-delay:1s;"></div>
-    <div class="key" style="left:85%; animation-delay:5s;"></div>
 </div>
 
 
