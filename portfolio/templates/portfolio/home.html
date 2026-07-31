@@ -560,12 +560,12 @@ opacity:0;
 
 
 .ladder {
-    display: flex;
-    align-items: flex-end;
-    gap: 25px;
-    justify-content: center;
-    position: relative;
-    margin-top: 40px;
+    display:flex;
+    align-items:flex-end;
+    gap:25px;
+    justify-content:center;
+    position:relative;
+    margin-top:50px;
 }
 
 
@@ -622,17 +622,6 @@ opacity:0;
 }
 
 
-/* Girl at bottom */
-
-.girl {
-    position:absolute;
-    bottom:0;
-    left:40px;
-    font-size:60px;
-}
-.girl {
-    z-index: 2;
-}
 
 .memory {
     position: relative;
@@ -646,14 +635,15 @@ opacity:0;
     .ladder{
         flex-direction:column;
         align-items:center;
+        gap:20px;
     }
 
     .step{
-        width:250px;
-    }
-
-    .girl{
-        display:none;
+        width:90%;
+        max-width:320px;
+        height:auto !important;
+        min-height:120px;
+        padding:20px;
     }
 
 }
@@ -1017,9 +1007,6 @@ the places that have inspired me along the way.
     <div class="ladder">
 
 
-    <div class="girl">
-        👩🏻‍💻
-    </div>
 
 
     <div class="step">
@@ -1028,9 +1015,9 @@ the places that have inspired me along the way.
 
         <span>
         No coding background.
-        My first step was learning
-        Python and understanding
-        how websites are built.
+      learning Python and 
+      understanding how 
+      websites are built.
         </span>
 
     </div>
