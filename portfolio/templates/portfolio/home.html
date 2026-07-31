@@ -364,40 +364,155 @@ html{
 }
 }
 
-.piano-bg {
-    position: fixed;
-    inset: 0;
-    overflow: hidden;
-    z-index: 0;
-    pointer-events: none;
+.fireflies{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
 }
 
-.container,
-nav,
-footer {
-    position: relative;
-    z-index: 1;
+.fireflies span{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#fff7cc;
+
+    opacity:.15;
+
+    box-shadow:
+    0 0 8px #fff6c2,
+    0 0 15px #ffe27a;
+
+    animation:floatFirefly linear infinite;
+}
+.fireflies span:nth-child(1){
+
+left:8%;
+top:82%;
+animation-duration:12s;
+animation-delay:0s;
+
 }
 
-.key {
-    position: absolute;
-    width: 24px;
-    height: 90px;
-    background: white;
-    border: 1px solid #ddd;
-    opacity: 0.5;
-    animation: floatUp 15s linear infinite;
+.fireflies span:nth-child(2){
+
+left:22%;
+top:70%;
+animation-duration:15s;
+animation-delay:2s;
+
 }
 
-@keyframes floatUp {
-    from {
-        transform: translateY(110vh);
-    }
-    to {
-        transform: translateY(-120px);
-    }
+.fireflies span:nth-child(3){
+
+left:36%;
+top:92%;
+animation-duration:14s;
+animation-delay:4s;
+
 }
 
+.fireflies span:nth-child(4){
+
+left:52%;
+top:78%;
+animation-duration:17s;
+animation-delay:1s;
+
+}
+
+.fireflies span:nth-child(5){
+
+left:66%;
+top:88%;
+animation-duration:13s;
+animation-delay:6s;
+
+}
+
+.fireflies span:nth-child(6){
+
+left:82%;
+top:80%;
+animation-duration:18s;
+animation-delay:3s;
+
+}
+
+.fireflies span:nth-child(7){
+
+left:94%;
+top:94%;
+animation-duration:16s;
+animation-delay:5s;
+
+}
+
+.fireflies span:nth-child(n+8){
+
+left:calc(5% + 90% * var(--random,0.5));
+}
+@keyframes floatFirefly{
+
+0%{
+
+transform:
+translateY(0)
+translateX(0)
+scale(.8);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.35;
+
+}
+
+50%{
+
+transform:
+translateY(-180px)
+translateX(18px)
+scale(1);
+
+opacity:.65;
+
+}
+
+80%{
+
+opacity:.25;
+
+}
+
+100%{
+
+transform:
+translateY(-380px)
+translateX(-15px)
+scale(.7);
+
+opacity:0;
+
+}
+
+}
 
 .connect-box {
     background: #FAF8F4;
@@ -689,14 +804,28 @@ footer{
     <div class="wave wave2"></div>
 </div>
 
+<div class="fireflies">
 
-<div class="piano-bg">
-    <div class="key" style="left:10%; animation-delay:0s;"></div>
-    <div class="key" style="left:25%; animation-delay:2s;"></div>
-    <div class="key" style="left:45%; animation-delay:4s;"></div>
-    <div class="key" style="left:65%; animation-delay:1s;"></div>
-    <div class="key" style="left:85%; animation-delay:5s;"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
 </div>
+
 
 <nav>
 
