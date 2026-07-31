@@ -7,20 +7,46 @@
     <title>Po's Coffee Guide</title>
 
     <style>
+body {
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f8f5ef;
-        }
+    font-family:"Manrope", sans-serif;
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-        }
+    margin:40px;
+
+    background:
+    radial-gradient(circle at top left,
+    #fff1c1,
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    #d9b892,
+    transparent 35%),
+
+    #3b2417;
+
+    color:#3b2a20;
+
+}
+
+       .container {
+
+max-width:1000px;
+
+margin:auto;
+
+background:
+rgba(255,248,235,0.95);
+
+padding:50px;
+
+border-radius:30px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.25);
+
+backdrop-filter:blur(10px);
+
+}
 
         h1 {
             text-align: center;
@@ -40,7 +66,57 @@
     text-align: center;
 }
 
+.tags span{
 
+display:inline-block;
+
+background:#FFE38B;
+
+padding:6px 15px;
+
+border-radius:20px;
+
+margin:5px;
+
+font-size:14px;
+
+color:#5C4B3B;
+
+}
+
+@media(max-width:768px){
+
+body{
+
+margin:15px;
+
+}
+
+
+.container{
+
+padding:25px;
+
+}
+
+
+.card{
+
+padding:20px;
+
+}
+
+
+h1{
+
+font-size:38px;
+
+}
+
+}
+
+box-shadow:
+0 8px 20px rgba(92,75,59,.3);
 
  .card img {
     width: 100%;
@@ -105,6 +181,123 @@
     transform: translateY(-3px);
 }
 
+.coffee-intro{
+
+text-align:center;
+
+max-width:650px;
+
+margin:20px auto 50px;
+
+font-size:20px;
+
+color:#6b4f3a;
+
+line-height:1.7;
+
+}
+
+.card {
+
+background:#fffaf3;
+
+padding:35px;
+
+border-radius:25px;
+
+margin-top:35px;
+
+box-shadow:
+0 15px 35px rgba(74,45,20,0.15);
+
+transition:
+transform .4s ease,
+box-shadow .4s ease;
+
+}
+
+
+.card:hover {
+
+transform:
+translateY(-10px);
+
+box-shadow:
+0 25px 50px rgba(74,45,20,0.25);
+
+}
+
+.steam {
+
+display:inline-block;
+
+animation:steam 3s infinite ease-in-out;
+
+opacity:.5;
+
+}
+
+
+
+@keyframes steam {
+
+
+0%{
+transform:translateY(5px);
+opacity:.2;
+}
+
+
+50%{
+transform:translateY(-10px);
+opacity:.8;
+}
+
+
+100%{
+transform:translateY(5px);
+opacity:.2;
+}
+
+}
+
+.coffee-light{
+
+position:fixed;
+
+width:8px;
+
+height:8px;
+
+background:#FFE38B;
+
+border-radius:50%;
+
+top:30%;
+
+right:15%;
+
+box-shadow:
+0 0 20px #FFE38B;
+
+animation:pulse 3s infinite;
+
+}
+
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(2);
+
+opacity:.5;
+
+}
+
+}
+
+
     </style>
 
 </head>
@@ -112,10 +305,19 @@
 
 <body>
 
+    <div class="coffee-light"></div>
+
 <div class="container">
 
     <h1>☕ Po's Coffee Guide</h1>
+<p class="coffee-intro">
 
+A collection of cafés, conversations, and small moments
+that made my days. 
+
+Every coffee has a story.
+
+</p>
 
 
     <div class="card">
@@ -124,8 +326,10 @@
              alt="Neighbours Coffee">
 
 
-        <h2>Neighbours on Market St</h2>
-
+        <h2>
+Neighbours on Market St
+<span class="steam">☁</span>
+</h2>
 
 
         <div class="info">
@@ -161,7 +365,7 @@
 
 
             <p>
-            ✍️ <strong>My Experience:</strong><br>
+             <strong>My Experience:</strong><br>
 
             Every time I visit Neighbours, I love the amazing
             vibe inside and the beautiful decoration.
@@ -184,7 +388,9 @@
          alt="Ground Floor Cafe">
 
 
-    <h2>Ground Floor Café</h2>
+    <h2>Ground Floor Café
+        <span class="steam">☁</span>
+    </h2>
 
 
     <div class="info">
@@ -213,7 +419,7 @@
 
 
         <p>
-        ✍️ <strong>My Experience:</strong><br>
+         <strong>My Experience:</strong><br>
 
         I really enjoy the spacious interior,
         which makes it a great place to sit, study, or work
@@ -235,7 +441,9 @@
          alt="Autumn Rooms Cafe">
 
 
-    <h2>Autumn Rooms</h2>
+    <h2>Autumn Rooms
+        <span class="steam">☁</span>
+    </h2>
 
 
     <div class="info">
@@ -271,7 +479,7 @@
 
 
         <p>
-        ✍️ <strong>My Experience:</strong><br>
+        <strong>My Experience:</strong><br>
 
         Autumn Rooms is one of my favourite cafés in Newcastle
         because of its beautiful decoration and unique atmosphere.
@@ -297,7 +505,9 @@
          alt="Equium Social Cafe">
 
 
-    <h2>Equium Social</h2>
+    <h2>Equium Social
+        <span class="steam">☁</span>
+    </h2>
 
 
     <div class="info">
@@ -334,7 +544,7 @@
 
 
         <p>
-        ✍️ <strong>My Experience:</strong><br>
+         <strong>My Experience:</strong><br>
 
         It has a great space to spend time with friends,
         enjoy coffee, and have a relaxing conversation.
@@ -357,7 +567,9 @@
          alt="Goldbergs Coffee House">
 
 
-    <h2>Goldbergs Coffee House</h2>
+    <h2>Goldbergs Coffee House
+        <span class="steam">☁</span>
+    </h2>
 
 
     <div class="info">
@@ -392,7 +604,7 @@
 
 
         <p>
-        ✍️ <strong>My Experience:</strong><br>
+        <strong>My Experience:</strong><br>
 
 
         I really enjoy the atmosphere because they have
