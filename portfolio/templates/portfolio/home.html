@@ -530,6 +530,39 @@ footer {
 
 }
 
+.step {
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+
+.step:hover {
+    transform: translateY(-15px) scale(1.08);
+    background:#5C4B3B;
+    color:white;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+
+/* hidden story */
+
+.step span {
+    display:block;
+    max-height:0;
+    opacity:0;
+    transition:0.4s ease;
+    font-size:13px;
+    margin-top:10px;
+}
+
+
+.step:hover span {
+    max-height:100px;
+    opacity:1;
+}
+
+
 </style>
 
 </head>
@@ -719,40 +752,77 @@ the places that have inspired me along the way.
     <div class="ladder">
 
 
-        <div class="girl">
-            👩🏻‍💻
-        </div>
+    <div class="girl">
+        👩🏻‍💻
+    </div>
 
 
-        <div class="step">
-            Started<br>
-            No coding background
-        </div>
+    <div class="step">
+
+        Started
+
+        <span>
+        No coding background.
+        My first step was learning
+        Python and understanding
+        how websites are built.
+        </span>
+
+    </div>
 
 
-        <div class="step">
-            Learning<br>
-            Python & Django
-        </div>
+
+    <div class="step">
+
+        Learning
+
+        <span>
+        Learned Python, Django,
+        HTML, CSS, databases,
+        and Git version control.
+        </span>
+
+    </div>
 
 
-        <div class="step">
-            Challenges<br>
-            Errors & debugging
-        </div>
+
+    <div class="step">
+
+        Challenges
+
+        <span>
+        Faced errors, broken layouts,
+        server problems, and debugging
+        challenges while building.
+        </span>
+
+    </div>
 
 
-        <div class="step">
-            Improvement<br>
-            Building & fixing
-        </div>
+
+    <div class="step">
+
+        Improvement
+
+        <span>
+        Learned from mistakes,
+        improved my design,
+        and developed problem-solving skills.
+        </span>
+
+    </div>
 
 
-        <div class="step">
-            Achievement<br>
-            Live portfolio
-        </div>
 
+    <div class="step">
+
+        Achievement
+
+        <span>
+        Created and deployed
+        my own portfolio website
+        from an idea into reality.
+        </span>
 
     </div>
 
