@@ -437,6 +437,92 @@ footer {
 }
 
 
+.ladder-section {
+    margin-top: 60px;
+    position: relative;
+    padding: 50px 20px;
+    overflow: hidden;
+}
+
+
+.ladder {
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+    justify-content: center;
+    position: relative;
+}
+
+
+.step {
+    width: 150px;
+    height: 70px;
+    background: #F7F1E8;
+    border: 2px solid #5C4B3B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #5C4B3B;
+    position: relative;
+}
+
+
+/* different heights create ladder effect */
+
+.step:nth-child(1){
+    height:80px;
+}
+
+.step:nth-child(2){
+    height:130px;
+}
+
+.step:nth-child(3){
+    height:180px;
+}
+
+.step:nth-child(4){
+    height:230px;
+}
+
+.step:nth-child(5){
+    height:280px;
+}
+
+
+/* Girl at bottom */
+
+.girl {
+    position:absolute;
+    bottom:0;
+    left:40px;
+    font-size:60px;
+}
+
+
+/* mobile */
+
+@media(max-width:768px){
+
+    .ladder{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .step{
+        width:250px;
+    }
+
+    .girl{
+        display:none;
+    }
+
+}
+
 </style>
 
 </head>
@@ -524,14 +610,6 @@ changing one life at a time."
 
     </div>
 
-
-          <p>
-        <strong>Let's Connect:</strong>
-        <a href="https://www.linkedin.com/in/thet-loon-po-992aa5178/" target="_blank">
-            Po
-        </a>
-    </p>
-
     </div>
 
 
@@ -608,6 +686,73 @@ the places that have inspired me along the way.
     </div>
 
 </div>
+
+
+<div class="ladder-section">
+
+
+    <h2>Building This Portfolio</h2>
+
+
+    <p>
+    This website is a personal project that I created to document my journey,
+    experiences, and professional growth.
+
+    With no previous background in web development, I taught myself Python
+    and Django to build this portfolio from the ground up.Through this process, 
+    I learned how to structure web applications, manage content, work with databases, 
+    use Git for version control, and deploy a live website.
+
+    There were many errors, challenges, and moments of frustration along the way,
+    but the most rewarding part has been seeing an idea transform into reality.
+    </p>
+
+
+
+    <div class="ladder">
+
+
+        <div class="girl">
+            👩🏻‍💻
+        </div>
+
+
+        <div class="step">
+            Started<br>
+            No coding background
+        </div>
+
+
+        <div class="step">
+            Learning<br>
+            Python & Django
+        </div>
+
+
+        <div class="step">
+            Challenges<br>
+            Errors & debugging
+        </div>
+
+
+        <div class="step">
+            Improvement<br>
+            Building & fixing
+        </div>
+
+
+        <div class="step">
+            Achievement<br>
+            Live portfolio
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</section>
 
 
     <div class="section" id="contact">
