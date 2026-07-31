@@ -562,6 +562,120 @@ footer {
     opacity:1;
 }
 
+body{
+    background:#050505;
+    overflow-x:hidden;
+}
+
+/* background container */
+.liquid-bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+/* common ribbon */
+.wave{
+    position:absolute;
+    bottom:-120px;
+    left:-10%;
+    width:120%;
+    height:320px;
+
+    border-radius:50%;
+
+    filter:blur(6px);
+
+    background:
+    linear-gradient(
+        90deg,
+        #1d4cff,
+        #5b2dff,
+        #ff2fa3,
+        #ff6a00,
+        #ffd43b
+    );
+
+    animation:flow 14s ease-in-out infinite;
+}
+
+/* glossy overlay */
+.wave::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(255,255,255,.55),
+        rgba(255,255,255,.02)
+    );
+
+    mix-blend-mode:screen;
+    opacity:.8;
+    border-radius:inherit;
+}
+
+/* second layer */
+.wave2{
+
+    opacity:.45;
+
+    filter:blur(20px);
+
+    transform:scale(1.15);
+
+    animation-duration:20s;
+
+    animation-direction:reverse;
+}
+
+@keyframes flow{
+
+    0%{
+        transform:
+        translateX(-3%)
+        translateY(0)
+        rotate(0deg);
+    }
+
+    25%{
+        transform:
+        translateX(2%)
+        translateY(-15px)
+        rotate(0.5deg);
+    }
+
+    50%{
+        transform:
+        translateX(5%)
+        translateY(10px)
+        rotate(-0.5deg);
+    }
+
+    75%{
+        transform:
+        translateX(2%)
+        translateY(-12px)
+        rotate(0.5deg);
+    }
+
+    100%{
+        transform:
+        translateX(-3%)
+        translateY(0)
+        rotate(0deg);
+    }
+}
+
+.container,
+nav,
+footer{
+    position:relative;
+    z-index:2;
+}
 
 </style>
 
@@ -569,6 +683,12 @@ footer {
 
 
 <body>
+
+    <div class="liquid-bg">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+</div>
+
 
 <div class="piano-bg">
     <div class="key" style="left:10%; animation-delay:0s;"></div>
@@ -868,6 +988,9 @@ the places that have inspired me along the way.
     </p>
 
 </footer>
+
+
+
 
 </body>
 </html>
