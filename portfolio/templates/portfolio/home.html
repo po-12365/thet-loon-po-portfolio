@@ -559,11 +559,13 @@ opacity:0;
 }
 
 
-.ladder-section {
-    margin-top: 60px;
+.ladder {
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+    justify-content: center;
     position: relative;
-    padding: 50px 20px;
-    overflow: hidden;
+    margin-top: 40px;
 }
 
 
@@ -579,8 +581,8 @@ opacity:0;
 .step {
     width: 150px;
     height: 70px;
-    background: #F7F1E8;
-    border: 2px solid #5C4B3B;
+    background: #FFE38B;
+    border: 2px solid #8B6F3D;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -590,8 +592,12 @@ opacity:0;
     font-size: 14px;
     color: #5C4B3B;
     position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255,216,107,0.8);
+}
 
 /* different heights create ladder effect */
 
@@ -624,7 +630,14 @@ opacity:0;
     left:40px;
     font-size:60px;
 }
+.girl {
+    z-index: 2;
+}
 
+.memory {
+    position: relative;
+    overflow: hidden;
+}
 
 /* mobile */
 
@@ -977,24 +990,27 @@ the places that have inspired me along the way.
 </div>
 
 
-<div class="ladder-section">
+<div class="section" id="building-portfolio">
 
+    <div class="card memory">
 
-    <h2>Building This Portfolio</h2>
+        <h2>Building This Portfolio</h2>
 
+        <p>
+        This website is a personal project that I created to document my journey,
+        experiences, and professional growth.
 
-    <p>
-    This website is a personal project that I created to document my journey,
-    experiences, and professional growth.
+        With no previous background in web development, I taught myself Python
+        and Django to build this portfolio from the ground up.
 
-    With no previous background in web development, I taught myself Python
-    and Django to build this portfolio from the ground up.Through this process, 
-    I learned how to structure web applications, manage content, work with databases, 
-    use Git for version control, and deploy a live website.
+        Through this process, I learned how to structure web applications,
+        manage content, work with databases, use Git for version control,
+        and deploy a live website.
 
-    There were many errors, challenges, and moments of frustration along the way,
-    but the most rewarding part has been seeing an idea transform into reality.
-    </p>
+        There were many errors, challenges, and moments of frustration along
+        the way, but the most rewarding part has been seeing an idea transform
+        into reality.
+        </p>
 
 
 
@@ -1073,7 +1089,14 @@ the places that have inspired me along the way.
         from an idea into reality.
         </span>
 
+
     </div>
+
+ <span class="firefly"></span>
+        <span class="firefly"></span>
+        <span class="firefly"></span>
+
+         </div>
 
 
 </div>
