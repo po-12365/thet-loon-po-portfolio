@@ -1020,6 +1020,155 @@ transform:translateX(-140vw);
 
 }
 
+.cloud-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:14px 32px;
+
+background:
+
+linear-gradient(
+135deg,
+#ffffff,
+#e8dcc8
+);
+
+
+color:#5C4B3B;
+
+text-decoration:none;
+
+border-radius:50px;
+
+
+font-size:16px;
+
+font-weight:600;
+
+
+box-shadow:
+
+0 10px 25px rgba(92,75,59,.15);
+
+
+position:relative;
+
+
+transition:.4s;
+
+}
+
+
+
+/* cloud bumps */
+
+.cloud-btn::before,
+.cloud-btn::after{
+
+
+content:"";
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+z-index:-1;
+
+}
+
+
+
+.cloud-btn::before{
+
+width:35px;
+
+height:35px;
+
+top:-12px;
+
+left:25px;
+
+}
+
+
+
+.cloud-btn::after{
+
+width:45px;
+
+height:45px;
+
+top:-18px;
+
+right:25px;
+
+}
+
+
+
+.cloud-btn:hover{
+
+
+transform:
+
+translateY(-6px);
+
+
+background:
+
+linear-gradient(
+135deg,
+#d9edf7,
+#f3e5cc
+);
+
+
+box-shadow:
+
+0 18px 35px rgba(92,75,59,.25);
+
+
+}
+
+.thought-cloud{
+
+max-width:500px;
+
+margin:30px auto;
+
+padding:35px;
+
+background:
+
+rgba(255,255,255,.75);
+
+
+border-radius:50px;
+
+
+text-align:center;
+
+font-size:22px;
+
+font-style:italic;
+
+line-height:1.6;
+
+
+box-shadow:
+
+0 15px 40px rgba(92,75,59,.15);
+
+
+backdrop-filter:blur(10px);
+
+}
+
 </style>
 
 </head>
@@ -1104,15 +1253,20 @@ As I look back on this journey, I feel incredibly grateful for every opportunity
     <div class="card">
 
 
-        <p>
-              "It has never been about changing
+     <div class="thought-cloud">
+
+<p>
+"It has never been about changing
 the world overnight.
 It has always been about
 changing one life at a time."
+</p>
 
-        </p>
+</div>
 
-<a href="{% url 'journey' %}">Read My Journey →</a>
+<a class="cloud-btn" href="{% url 'journey' %}">
+    ☁️ Read My Journey
+</a>
 
 
     </div>
@@ -1126,10 +1280,13 @@ changing one life at a time."
 <img src="{% static 'portfolio/images/food.jpg' %}" 
          width="200"
          alt="Food experiences">
-
-       <h2>
-<a href="{% url 'food' %}">Food & Coffee Experiences</a>
+<h2>
+Food & Coffee Experiences
 </h2>
+
+<a class="cloud-btn" href="{% url 'food' %}">
+     Explore My Coffee & Food Stories
+</a>
 
         <p>
         Exploring cafes, restaurants, and unique food experiences while sharing recommendations and discoveries with others.
@@ -1183,12 +1340,13 @@ the places that have inspired me along the way.
             My goal is to create content that is relatable, helpful,
             and encourages other international students.
         </p>
+<a class="cloud-btn"
+href="https://www.tiktok.com/@diarys_po01?_r=1&_t=ZS-98EQTsTaGuK"
+target="_blank">
 
-        <a class="menu-btn"
-           href="https://www.tiktok.com/@diarys_po01?_r=1&_t=ZS-98EQTsTaGuK"
-           target="_blank">
-           📱 Follow My Journey
-        </a>
+ Follow My Journey
+
+</a>
 
     </div>
 
