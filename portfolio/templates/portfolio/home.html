@@ -364,7 +364,7 @@ html{
 }
 }
 
-.fireflies{
+.sky-particles{
 
     position:fixed;
 
@@ -378,141 +378,146 @@ html{
 
 }
 
-.fireflies span{
+
+.sky-particles span{
 
     position:absolute;
 
-    width:6px;
+    width:8px;
 
-    height:6px;
+    height:8px;
 
     border-radius:50%;
 
-    background:#fff7cc;
 
-    opacity:.15;
+    background:#fff4d6;
+
+
+    opacity:.25;
+
 
     box-shadow:
-    0 0 8px #fff6c2,
-    0 0 15px #ffe27a;
+    0 0 12px rgba(255,240,200,.8),
+    0 0 25px rgba(200,220,240,.6);
 
-    animation:floatFirefly linear infinite;
-}
-.fireflies span:nth-child(1){
 
-left:8%;
-top:82%;
-animation-duration:12s;
-animation-delay:0s;
+    animation:
+    riseLight linear infinite;
 
 }
 
-.fireflies span:nth-child(2){
 
-left:22%;
-top:70%;
-animation-duration:15s;
-animation-delay:2s;
 
-}
+/* different starting points */
 
-.fireflies span:nth-child(3){
 
-left:36%;
-top:92%;
-animation-duration:14s;
-animation-delay:4s;
+.sky-particles span:nth-child(1){
 
-}
+left:10%;
+top:90%;
 
-.fireflies span:nth-child(4){
-
-left:52%;
-top:78%;
-animation-duration:17s;
-animation-delay:1s;
-
-}
-
-.fireflies span:nth-child(5){
-
-left:66%;
-top:88%;
-animation-duration:13s;
-animation-delay:6s;
-
-}
-
-.fireflies span:nth-child(6){
-
-left:82%;
-top:80%;
 animation-duration:18s;
+
+}
+
+
+.sky-particles span:nth-child(2){
+
+left:25%;
+top:80%;
+
+animation-duration:22s;
+
 animation-delay:3s;
 
 }
 
-.fireflies span:nth-child(7){
 
-left:94%;
-top:94%;
-animation-duration:16s;
+.sky-particles span:nth-child(3){
+
+left:45%;
+top:95%;
+
+animation-duration:20s;
+
 animation-delay:5s;
 
 }
 
-.fireflies span:nth-child(n+8){
 
-left:calc(5% + 90% * var(--random,0.5));
+.sky-particles span:nth-child(4){
+
+left:65%;
+top:85%;
+
+animation-duration:24s;
+
+animation-delay:2s;
+
 }
-@keyframes floatFirefly{
+
+
+.sky-particles span:nth-child(5){
+
+left:85%;
+top:90%;
+
+animation-duration:19s;
+
+animation-delay:6s;
+
+}
+
+
+
+@keyframes riseLight{
+
 
 0%{
 
 transform:
 translateY(0)
 translateX(0)
-scale(.8);
+scale(.5);
 
 opacity:0;
 
 }
 
+
 20%{
 
-opacity:.35;
+opacity:.4;
 
 }
+
 
 50%{
 
 transform:
-translateY(-180px)
-translateX(18px)
+translateY(-300px)
+translateX(30px)
 scale(1);
 
-opacity:.65;
+opacity:.7;
 
 }
 
-80%{
-
-opacity:.25;
-
-}
 
 100%{
 
 transform:
-translateY(-380px)
-translateX(-15px)
-scale(.7);
+translateY(-700px)
+translateX(-20px)
+scale(.3);
 
 opacity:0;
 
 }
 
+
 }
+
 
 .connect-box {
     background: #FAF8F4;
@@ -838,6 +843,183 @@ h2:hover::after{
 }
 
 
+.sky-bg{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+z-index:-1;
+
+background:
+
+linear-gradient(
+180deg,
+#b8d8e8,
+#e9dcc7,
+#f8f2e8
+);
+
+}
+
+
+/* warm light coming from horizon */
+
+.horizon-light{
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+border-radius:50%;
+
+
+background:
+
+radial-gradient(
+circle,
+rgba(255,235,180,.8),
+transparent 70%
+);
+
+
+bottom:-200px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+
+animation:
+sunRise 8s infinite alternate;
+
+}
+
+
+
+@keyframes sunRise{
+
+from{
+
+transform:
+translateX(-50%)
+translateY(30px);
+
+opacity:.6;
+
+}
+
+
+to{
+
+transform:
+translateX(-50%)
+translateY(-20px);
+
+opacity:1;
+
+}
+
+}
+
+
+
+/* moving clouds */
+
+
+.soft-cloud{
+
+position:absolute;
+
+background:
+rgba(255,255,255,.35);
+
+filter:blur(25px);
+
+border-radius:50%;
+
+}
+
+
+
+.cloud1{
+
+width:350px;
+
+height:120px;
+
+top:20%;
+
+left:-300px;
+
+
+animation:
+cloudMove 40s linear infinite;
+
+}
+
+
+
+.cloud2{
+
+width:450px;
+
+height:150px;
+
+top:50%;
+
+right:-400px;
+
+
+animation:
+cloudMoveReverse 50s linear infinite;
+
+}
+
+
+
+@keyframes cloudMove{
+
+
+from{
+
+transform:translateX(0);
+
+}
+
+
+to{
+
+transform:translateX(140vw);
+
+}
+
+}
+
+
+
+@keyframes cloudMoveReverse{
+
+
+from{
+
+transform:translateX(0);
+
+}
+
+
+to{
+
+transform:translateX(-140vw);
+
+}
+
+}
+
 </style>
 
 </head>
@@ -845,30 +1027,19 @@ h2:hover::after{
 
 <body>
 
-    <div class="liquid-bg">
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
+<div class="sky-bg">
+    <div class="horizon-light"></div>
+    <div class="soft-cloud cloud1"></div>
+    <div class="soft-cloud cloud2"></div>
 </div>
 
-<div class="fireflies">
+<div class="sky-particles">
 
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
 
 </div>
 
