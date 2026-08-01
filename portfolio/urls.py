@@ -7,4 +7,5 @@ urlpatterns = [
     path("australia/", views.australia, name="australia"),
     path("timeline/", views.timeline, name="timeline"),
     path("journey/", views.journey, name="journey"),
+    path("podcast/", views.podcast, name="podcast"),
 ]

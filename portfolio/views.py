@@ -19,3 +19,6 @@ def timeline(request):
 
 def journey(request):
     return render(request, "portfolio/journey.html")
+
+def podcast(request):
+    return render(request, "portfolio/podcast.html")
