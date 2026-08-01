@@ -46,20 +46,27 @@ linear-gradient(
 );
 
 
+.podcast-hero > *{
+    position:relative;
+    z-index:2;
+}
+
+
 }
 
 .cloud{
 
 position:absolute;
 
-background:
-
-rgba(255,255,255,0.65);
+background:rgba(255,255,255,0.65);
 
 border-radius:50%;
 
 filter:blur(20px);
 
+box-shadow:
+60px 20px 0 rgba(255,255,255,.65),
+120px 0 0 rgba(255,255,255,.65);
 
 }
 
@@ -260,5 +267,24 @@ transform:translateY(-8px);
 
 transition:.4s;
 
+
+}
+
+@media(max-width:768px){
+
+.cloud-one{
+width:200px;
+height:80px;
+}
+
+.cloud-two{
+width:250px;
+height:100px;
+}
+
+.cloud-three{
+width:180px;
+height:70px;
+}
 
 }
