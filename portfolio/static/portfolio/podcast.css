@@ -1,3 +1,5 @@
+
+
 body{
 
 margin:0;
@@ -11,48 +13,43 @@ color:#3b2a20;
 }
 
 
+.podcast-hero {
 
-.podcast-hero{
+    height:80vh;
 
-
-height:80vh;
-
-position:relative;
-
-overflow:hidden;
-
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-
-background:
-
-linear-gradient(
-
-180deg,
-
-#87b9d6,
-
-#e8d8c3
-
-);
-
-
-.podcast-hero > *{
     position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        #87b9d6,
+        #e8d8c3
+    );
+
+}
+
+
+.podcast-hero > * {
+
+    position:relative;
+
     z-index:2;
+
 }
 
 
-}
 
 .cloud{
 
