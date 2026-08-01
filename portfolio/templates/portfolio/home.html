@@ -643,7 +643,7 @@ opacity:0;
         width:100%;
         padding:0 10px;
     }
-    
+
     .step{
         width:95%;
         max-width:380px;
@@ -801,6 +801,43 @@ footer{
     z-index:2;
 }
 
+#projects .card{
+    margin:30px auto;
+    max-width:700px;
+    text-align:center;
+}
+
+#projects a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#5C4B3B;
+}
+
+#projects a:hover{
+    color:#8b6b4b;
+}
+h2::after{
+
+    content:"";
+    display:block;
+    width:0;
+    height:3px;
+    background:#c89b55;
+    margin:8px auto 0;
+    transition:.4s ease;
+
+}
+
+
+h2:hover::after{
+
+    width:80%;
+
+}
+
+
 </style>
 
 </head>
@@ -843,6 +880,8 @@ footer{
     <div>
         <a href="#about">About</a>
         <a href="#journey">Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Connect</a>
        
     </div>
@@ -860,7 +899,7 @@ footer{
    <h1>Hi, I'm Po </h1>
 
    <p class="intro-text">
-    International Student | Aspiring Audit Professional | Tech & AI Enthusiast | Lifelong Learner
+    International Student | Aspiring Audit Professional | Tech & AI | Lifelong Learner
 </p>
 
 </div> 
@@ -984,6 +1023,53 @@ the places that have inspired me along the way.
     </div>
 
 </div>
+
+
+<div class="section" id="projects">
+
+    <h2>Projects & Creative Work</h2>
+
+    <div class="card">
+
+        <h2>Roots & Resistance</h2>
+
+        <p>
+            Climate Justice Podcast Reflection
+        </p>
+
+        <p>
+            A storytelling project exploring climate justice,
+            lived experiences, and the voices of communities
+            often missing from mainstream conversations.
+        </p>
+
+        <a href="{% url 'podcast' %}">
+            Explore Project →
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <h2> Building My Portfolio</h2>
+
+        <p>
+            Personal Web Development Project
+        </p>
+
+        <p>
+            A self-taught journey building this website using
+            Python, Django, HTML, and CSS.
+        </p>
+
+        <a href="#building-portfolio">
+            Explore Project →
+        </a>
+
+    </div>
+
+</div>
+
 
 
 <div class="section" id="building-portfolio">
