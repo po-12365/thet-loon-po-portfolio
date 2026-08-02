@@ -1231,6 +1231,355 @@ font-style:italic;
 }
 
 
+.letter-wrapper{
+
+max-width:750px;
+
+margin:100px auto;
+
+position:relative;
+
+text-align:center;
+
+}
+
+
+
+/* Brown ribbon */
+
+.ribbon{
+
+position:absolute;
+
+top:-35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+
+background:
+
+linear-gradient(
+135deg,
+#8b5e3c,
+#6f4328
+);
+
+
+color:#fff8ee;
+
+
+padding:15px 35px;
+
+
+border-radius:30px;
+
+
+cursor:pointer;
+
+
+font-weight:600;
+
+
+box-shadow:
+
+0 10px 25px rgba(92,75,59,.25);
+
+
+z-index:3;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.ribbon:hover{
+
+
+transform:
+
+translateX(-50%)
+
+translateY(-8px);
+
+
+background:
+
+linear-gradient(
+135deg,
+#a8734d,
+#7b4b2d
+);
+
+
+}
+
+
+
+.ribbon span{
+
+
+display:block;
+
+font-size:14px;
+
+margin-top:5px;
+
+
+color:#f5e6d3;
+
+
+}
+
+
+
+/* Letter */
+
+.invitation-letter{
+
+
+background:
+
+
+linear-gradient(
+
+135deg,
+
+rgba(255,250,243,.95),
+
+rgba(238,224,205,.95)
+
+);
+
+
+
+padding:55px;
+
+
+border-radius:40px;
+
+
+box-shadow:
+
+
+0 30px 70px rgba(92,75,59,.25);
+
+
+
+opacity:0;
+
+
+max-height:0;
+
+
+overflow:hidden;
+
+
+transform:
+
+translateY(-40px);
+
+
+transition:
+
+all .8s ease;
+
+
+}
+
+
+
+
+.invitation-letter.open{
+
+
+opacity:1;
+
+
+max-height:900px;
+
+
+transform:
+
+translateY(0);
+
+
+}
+
+
+
+
+.invitation-letter h2{
+
+
+font-size:42px;
+
+
+color:#5C4B3B;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.letter-intro{
+
+
+font-size:20px;
+
+
+line-height:1.8;
+
+
+color:#6b4f3a;
+
+
+}
+
+
+
+.invitation-letter p{
+
+
+line-height:1.8;
+
+
+color:#6b4f3a;
+
+
+}
+
+
+
+/* Links */
+
+.letter-links{
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+flex-wrap:wrap;
+
+
+gap:20px;
+
+
+margin-top:35px;
+
+
+}
+
+
+
+.letter-links a{
+
+
+width:160px;
+
+
+padding:20px;
+
+
+border-radius:30px;
+
+
+background:
+
+
+linear-gradient(
+
+135deg,
+
+#dcecf5,
+
+#f4e4cf
+
+);
+
+
+
+color:#5C4B3B;
+
+
+text-decoration:none;
+
+
+font-weight:600;
+
+
+transition:.4s;
+
+
+box-shadow:
+
+
+0 10px 25px rgba(92,75,59,.12);
+
+
+}
+
+
+
+.letter-links a:hover{
+
+
+transform:
+
+translateY(-10px);
+
+
+background:
+
+
+linear-gradient(
+
+135deg,
+
+#f4dfc2,
+
+#d7eaf4
+
+);
+
+
+box-shadow:
+
+0 20px 40px rgba(92,75,59,.2);
+
+
+}
+
+
+
+
+.signature{
+
+
+margin-top:45px;
+
+
+font-style:italic;
+
+
+font-size:18px;
+
+
+color:#8a7562!important;
+
+
+}
+
 </style>
 
 </head>
@@ -1575,36 +1924,127 @@ Food & Coffee Experiences
 
     <div class="section" id="contact">
 
-<div class="connect-box">
 
-<h2>Let's Connect</h2>
+<div class="letter-wrapper">
 
-<p>
-    Thank you for visiting my portfolio.
-</p>
 
-    <p>
-        <strong>LinkedIn:</strong>
-        <a href="https://www.linkedin.com/in/thet-loon-po-992aa5178/" target="_blank">
-            Po
-        </a>
-    </p>
+    <div class="ribbon" onclick="openLetter()">
 
-    <p>
-        <strong>TikTok:</strong>
-        <a href="https://www.tiktok.com/@diarys_po01?_r=1&_t=ZS-98EQTsTaGuK" target="_blank">
-            @diarys_po01
-        </a>
-    </p>
+        🎀
 
-    <p>
-        <strong>Email:</strong>
-        <a href="mailto:thetloonpo2001@gmail.com">
-            thetloonpo2001@gmail.com
-        </a>
-    </p>
+        <span>
+            Open Invitation
+        </span>
+
+    </div>
+
+
+
+    <div class="invitation-letter" id="letter">
+
+
+        <h2>
+            Let's Connect
+        </h2>
+
+
+        <p class="letter-intro">
+
+            Thank you for taking the time to explore my journey.
+
+            <br><br>
+
+            Every experience, challenge, and connection has shaped
+            who I am today. I believe meaningful conversations
+            create opportunities to learn, share, and grow together.
+
+        </p>
+
+
+
+        <p>
+
+            Whether you would like to discuss ideas, exchange
+            perspectives, collaborate on future opportunities,
+            or simply share a similar journey, I would love
+            to connect with you.
+
+        </p>
+
+
+
+        <div class="letter-links">
+
+
+            <a href="https://www.linkedin.com/in/thet-loon-po-992aa5178/"
+            target="_blank">
+
+
+
+                <br>
+
+                LinkedIn
+
+                <br>
+
+                Po
+
+            </a>
+
+
+
+            <a href="https://www.tiktok.com/@diarys_po01?_r=1&_t=ZS-98EQTsTaGuK"
+            target="_blank">
+
+                
+
+                <br>
+
+                Follow My Journey
+
+                <br>
+
+                @diarys_po01
+
+            </a>
+
+
+
+            <a href="mailto:thetloonpo2001@gmail.com">
+
+        
+
+                <br>
+
+                Email
+
+                <br>
+
+                Contact Me
+
+            </a>
+
+
+        </div>
+
+
+
+        <p class="signature">
+
+            Until the next chapter,
+
+            <br><br>
+
+            <strong>Po</strong>
+
+        </p>
+
+
+    </div>
+
 
 </div>
+
 
 </div>
 
