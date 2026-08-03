@@ -563,67 +563,526 @@ opacity:0;
     line-height: 1.6;
 }
 
+.constellation{
 
-.ladder {
-    display:flex;
-    align-items:flex-end;
-    gap:25px;
-    justify-content:center;
-    position:relative;
-    margin-top:50px;
+position:relative;
+
+height:550px;
+
+margin-top:60px;
+
+overflow:hidden;
+
+background:
+
+linear-gradient(
+180deg,
+#dcecf5,
+#f7ead8
+);
+
+border-radius:40px;
+
 }
 
 
-.ladder {
-    display: flex;
-    align-items: flex-end;
-    gap: 25px;
-    justify-content: center;
-    position: relative;
+/* stars */
+
+
+.star{
+
+position:absolute;
+
+font-size:42px;
+
+color:#e5c76b;
+
+cursor:pointer;
+
+z-index:5;
+
+
+text-shadow:
+
+0 0 10px rgba(255,220,120,.8);
+
+
+animation:
+floatStar 5s ease-in-out infinite;
+
+
+transition:.4s;
+
 }
 
 
-.step {
-    width: 150px;
-    height: 70px;
-    background: #FFE38B;
-    border: 2px solid #8B6F3D;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-    color: #5C4B3B;
-    position: relative;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.step:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px rgba(255,216,107,0.8);
+
+.star:hover{
+
+transform:scale(1.35);
+
+
+color:#fff1a8;
+
+
+text-shadow:
+
+0 0 15px #ffe58a,
+0 0 35px #ffe58a,
+0 0 55px #ffe58a;
+
+
 }
 
-/* different heights create ladder effect */
 
-.step:nth-child(1){
-    height:120px;
+
+/* floating movement */
+
+
+@keyframes floatStar{
+
+
+0%,100%{
+
+margin-top:0;
+
 }
 
-.step:nth-child(2){
-    height:140px;
+
+50%{
+
+margin-top:-12px;
+
 }
 
-.step:nth-child(3){
-    height:160px;
+
 }
 
-.step:nth-child(4){
-    height:180px;
+
+
+
+
+/* reflection popup */
+
+
+.reflection-card{
+
+
+position:absolute;
+
+
+width:230px;
+
+
+background:
+
+rgba(255,250,243,.95);
+
+
+padding:20px;
+
+
+border-radius:25px;
+
+
+box-shadow:
+
+0 20px 40px rgba(92,75,59,.2);
+
+
+
+font-size:14px;
+
+
+line-height:1.6;
+
+
+color:#5C4B3B;
+
+
+opacity:0;
+
+
+visibility:hidden;
+
+
+transform:
+
+translateY(20px);
+
+
+transition:.5s;
+
+
+z-index:20;
+
+
 }
 
-.step:nth-child(5){
-    height:200px;
+
+
+
+
+.star:hover .reflection-card{
+
+
+opacity:1;
+
+
+visibility:visible;
+
+
+transform:
+
+translateY(0);
+
+
+}
+
+
+
+
+
+.reflection-card h3{
+
+
+margin-top:0;
+
+color:#8b5e3c;
+
+
+}
+
+
+
+
+
+/* STAR POSITIONS */
+
+
+.curiosity{
+
+
+left:10%;
+
+bottom:100px;
+
+}
+
+
+
+.python{
+
+
+left:30%;
+
+bottom:220px;
+
+}
+
+
+
+.django{
+
+
+left:60%;
+
+bottom:260px;
+
+}
+
+
+
+.css{
+
+
+left:48%;
+
+bottom:90px;
+
+}
+
+
+
+.git{
+
+
+left:78%;
+
+bottom:180px;
+
+}
+
+
+
+.deployment{
+
+
+left:65%;
+
+top:70px;
+
+}
+
+
+
+.future{
+
+
+left:38%;
+
+top:50px;
+
+
+animation:
+
+futureGlow 2s infinite;
+
+}
+
+
+
+
+
+/* future blinking star */
+
+
+@keyframes futureGlow{
+
+
+0%,100%{
+
+opacity:.5;
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+
+
+/* CONNECTION LINES */
+
+
+.connection{
+
+
+position:absolute;
+
+
+height:2px;
+
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+#c9ddea,
+transparent
+);
+
+
+transform-origin:left center;
+
+
+opacity:.7;
+
+
+}
+
+
+
+.line-one{
+
+
+width:180px;
+
+left:15%;
+
+bottom:150px;
+
+transform:rotate(-35deg);
+
+}
+
+
+
+
+.line-two{
+
+
+width:170px;
+
+left:32%;
+
+bottom:230px;
+
+transform:rotate(10deg);
+
+}
+
+
+
+
+
+.line-three{
+
+
+width:180px;
+
+left:48%;
+
+bottom:120px;
+
+transform:rotate(-35deg);
+
+}
+
+
+
+
+.line-four{
+
+
+width:150px;
+
+left:62%;
+
+bottom:260px;
+
+transform:rotate(-45deg);
+
+}
+
+
+
+
+
+.line-five{
+
+
+width:170px;
+
+left:45%;
+
+top:100px;
+
+transform:rotate(40deg);
+
+}
+
+
+
+
+/* keep your card style */
+
+
+.memory{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:768px){
+
+
+.constellation{
+
+height:750px;
+
+}
+
+
+
+.star{
+
+font-size:35px;
+
+}
+
+
+.curiosity{
+
+left:15%;
+
+bottom:100px;
+
+}
+
+
+.python{
+
+left:25%;
+
+bottom:300px;
+
+}
+
+
+.django{
+
+left:60%;
+
+bottom:400px;
+
+}
+
+
+.css{
+
+left:50%;
+
+bottom:180px;
+
+}
+
+
+.git{
+
+left:70%;
+
+bottom:280px;
+
+}
+
+
+.deployment{
+
+left:50%;
+
+top:80px;
+
+}
+
+
+.future{
+
+left:30%;
+
+top:30px;
+
+}
+
+
 }
 
 
@@ -631,46 +1090,6 @@ opacity:0;
 .memory {
     position: relative;
     overflow: hidden;
-}
-
-/* mobile */
-
-@media(max-width:768px){
-
-    .ladder{
-        flex-direction:column;
-        align-items:center;
-        gap:20px;
-    }
-
-
-    .ladder{
-        width:160%;
-        padding:0 10px;
-    }
-
-    .step{
-        width:120%;
-        max-width:380px;
-        height:auto !important;
-        min-height:120px;
-        padding:25px;
-    }
-
-}
-
-.step {
-    cursor: pointer;
-    transition: all 0.4s ease;
-    overflow: hidden;
-}
-
-
-.step:hover {
-    transform: translateY(-15px) scale(1.08);
-    background:#5C4B3B;
-    color:white;
-    box-shadow:0 20px 40px rgba(0,0,0,0.25);
 }
 
 
@@ -1818,103 +2237,234 @@ Food & Coffee Experiences
 
     <div class="card memory">
 
-        <h2>Building This Portfolio</h2>
+
+        <h2>
+            Connecting the Dots
+        </h2>
+
 
         <p>
-        This website is a personal project that I created to document my journey,
-        experiences, and professional growth.
+       I started creating this portfolio with a simple goal:
+        to learn the foundations of coding and understand how websites are built.
 
-        With no previous background in web development, I taught myself Python
-        and Django to build this portfolio from the ground up.
+At the beginning, seeing a simple message like “Hi, I’m Po” appear on the screen felt like a small achievement.
+ However, that small moment helped me realise that every creative project begins with one small step.
+  Once I understood the patterns behind coding and design, I became curious about what else I could create.
 
-        Through this process, I learned how to structure web applications,
-        manage content, work with databases, use Git for version control,
-        and deploy a live website.
+I spent many nights and early mornings improving layouts, adjusting designs, solving problems, and
+ finding better ways to structure my ideas. Every small improvement became a reminder that progress comes through patience and persistence.
 
-        There were many errors, challenges, and moments of frustration along
-        the way, but the most rewarding part has been seeing an idea transform
-        into reality.
+Seeing my project live on the internet was a moment I felt genuinely proud of. More importantly, 
+this journey changed how I viewed myself. I used to believe that success came mainly from natural talent, 
+and I often felt frustrated because I did not see myself as someone who was naturally gifted.
+
+Through this process, I learned that hard work is not something to be ashamed of. 
+The hours, mistakes, and challenges are not signs of weakness; they are part of growth. 
+Sometimes achieving a goal means spending days learning, rebuilding, and trying again.
+
+Looking back, each challenge became a star in my journey. Esach moment may seem small, 
+but together they create a bigger picture of growth.
         </p>
 
 
 
-    <div class="ladder">
+        <div class="constellation">
+
+
+            <!-- connecting lines -->
+
+            <div class="connection line-one"></div>
+            <div class="connection line-two"></div>
+            <div class="connection line-three"></div>
+            <div class="connection line-four"></div>
+            <div class="connection line-five"></div>
+
+
+
+            <!-- stars -->
+
+
+            <div class="star curiosity">
+
+                ✦
+
+                <div class="reflection-card">
+
+                    <h3>
+                    Curiosity
+                    </h3>
+
+                    <p>
+                    I started with no Python,
+                    Django, or web development
+                    background.
+
+                    The first step was simply
+                    being willing to learn.
+                    </p>
+
+                </div>
+
+            </div>
 
 
 
 
-    <div class="step">
 
-        Started
+            <div class="star python">
 
-        <span>
-        No coding background.
-        </span>
+                ✦
+
+                <div class="reflection-card">
+
+                    <h3>
+                    Python
+                    </h3>
+
+                    <p>
+                    My first programming language.
+
+                    It taught me how to think
+                    logically and approach
+                    problems step by step.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="star django">
+
+                ✦
+
+                <div class="reflection-card">
+
+                    <h3>
+                    Django
+                    </h3>
+
+                    <p>
+                    Learning views, templates,
+                    URLs, and databases changed
+                    how I understood websites.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="star css">
+
+                ✦
+
+                <div class="reflection-card">
+
+                    <h3>
+                    Design & Creativity
+                    </h3>
+
+                    <p>
+                    HTML and CSS helped me transform
+                    ideas into experiences that
+                    communicate identity and story.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="star git">
+
+                ✦
+
+                <div class="reflection-card">
+
+                    <h3>
+                    Git & GitHub
+                    </h3>
+
+                    <p>
+                    Version control taught me that
+                    progress comes from improving,
+                    testing, and learning from mistakes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="star deployment">
+
+                ✦
+
+                <div class="reflection-card">
+
+                    <h3>
+                    Deployment
+                    </h3>
+
+                    <p>
+                    Seeing my project online turned
+                    an idea into something real
+                    that others could experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="star future">
+
+                ✦
+
+                <div class="reflection-card">
+
+                    <h3>
+                    Next Chapter...
+                    </h3>
+
+                    <p>
+                    This constellation is still growing.
+
+                    Every new challenge will become
+                    another star.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
 
     </div>
-
-
-
-    <div class="step">
-
-        Learning
-
-        <span>
-        Learned Python, Django,
-        HTML, CSS, databases,
-        and Git version control.
-        </span>
-
-    </div>
-
-
-
-    <div class="step">
-
-        Challenges
-
-        <span>
-        Faced errors, broken layouts,
-        server problems, and debugging
-        challenges while building.
-        </span>
-
-    </div>
-
-
-
-    <div class="step">
-
-        Improvement
-
-        <span>
-        Learned from mistakes,
-        improved my design,
-        and developed problem-solving skills.
-        </span>
-
-    </div>
-
-
-
-    <div class="step">
-
-        Achievement
-
-        <span>
-        Created and deployed
-        my own portfolio website
-        from an idea into reality.
-        </span>
-
-
-    </div>
-
- <span class="firefly"></span>
-        <span class="firefly"></span>
-        <span class="firefly"></span>
-
-         </div>
 
 
 </div>
