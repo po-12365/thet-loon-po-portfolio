@@ -26,6 +26,17 @@ html {
 }
 
 
+.journey-hero {
+
+    background:
+    radial-gradient(
+        circle at top,
+        rgba(255,255,255,.8),
+        transparent 60%
+    );
+
+}
+
 .hero-label {
 
     position:relative;
@@ -240,9 +251,11 @@ html {
 }
 
 
-.journey-item:hover {
+.journey-item:hover{
 
-    transform:translateY(-8px);
+    transform:
+    translateY(-8px)
+    scale(1.01);
 
 }
 
@@ -306,6 +319,41 @@ html {
 
 }
 
+
+.journey-photo {
+
+    position:relative;
+
+}
+
+
+.journey-photo::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    180deg,
+    transparent,
+    rgba(0,0,0,0.08)
+    );
+
+    opacity:0;
+
+    transition:.5s ease;
+
+}
+
+
+.journey-photo:hover::after {
+
+    opacity:1;
+
+}
 
 
 /* LEFT RIGHT POSITION */
@@ -707,5 +755,77 @@ html {
 
 }
 
+
+}
+
+.journey-cloud-bg::before,
+.journey-cloud-bg::after {
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:120px;
+
+    background:
+    radial-gradient(circle at 30% 50%, white 35%, transparent 36%),
+    radial-gradient(circle at 55% 40%, white 40%, transparent 41%),
+    radial-gradient(circle at 75% 55%, white 30%, transparent 31%);
+
+    opacity:0.35;
+
+    z-index:-1;
+
+    animation:cloudMove 25s linear infinite;
+
+}
+
+
+.journey-cloud-bg::before {
+
+    top:100px;
+
+    left:-150px;
+
+}
+
+
+.journey-cloud-bg::after {
+
+    top:800px;
+
+    right:-150px;
+
+    animation-duration:35s;
+
+}
+
+
+@keyframes cloudMove {
+
+    from {
+
+        transform:translateX(0);
+
+    }
+
+    to {
+
+        transform:translateX(120px);
+
+    }
+
+}
+
+body {
+
+    background:
+    linear-gradient(
+        180deg,
+        #faf8f3 0%,
+        #f5f1e8 50%,
+        #faf8f3 100%
+    );
 
 }
