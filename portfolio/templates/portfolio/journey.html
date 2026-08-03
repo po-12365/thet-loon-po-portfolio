@@ -65,6 +65,8 @@
 
         <img src="{% static 'portfolio/images/journey/vietnam.jpg' %}"
         alt="Vietnam">
+        class="journey-img"
+onclick="openImage(this)"
 
     </div>
 
@@ -107,6 +109,8 @@ EARLY FOUNDATION
 
         <img src="{% static 'portfolio/images/journey/engineering.jpg' %}"
         alt="Petroleum Engineering">
+        class="journey-img"
+onclick="openImage(this)"
 
     </div>
 
@@ -177,7 +181,8 @@ EARLY FOUNDATION
 
         <img src="{% static 'portfolio/images/journey/australia.jpg' %}"
         alt="Australia">
-
+class="journey-img"
+onclick="openImage(this)"
     </div>
 
 
@@ -226,6 +231,8 @@ I had to learn, adapt, and rebuild myself.
 
         <img src="{% static 'portfolio/images/journey/philippines.jpg' %}"
         alt="Philippines Youth Leadership Summit">
+        class="journey-img"
+onclick="openImage(this)"
 
     </div>
 
@@ -306,6 +313,8 @@ I had to learn, adapt, and rebuild myself.
 
         <img src="{% static 'portfolio/images/journey/passion.jpg' %}"
         alt="Choosing Passion Over Comfort">
+        class="journey-img"
+onclick="openImage(this)"
 
     </div>
 
@@ -351,6 +360,8 @@ I had to learn, adapt, and rebuild myself.
 
         <img src="{% static 'portfolio/images/journey/diplomacy.jpg' %}"
         alt="Future Diplomacy Forum">
+        class="journey-img"
+onclick="openImage(this)"
 
     </div>
 
@@ -399,6 +410,8 @@ I had to learn, adapt, and rebuild myself.
 
         <img src="{% static 'portfolio/images/journey/leadership.jpg' %}"
         alt="Student Leadership">
+class="journey-img"
+onclick="openImage(this)"
 
     </div>
 
@@ -448,6 +461,8 @@ I had to learn, adapt, and rebuild myself.
 
         <img src="{% static 'portfolio/images/journey/internship.jpg' %}"
         alt="Big Four Internship">
+        class="journey-img"
+onclick="openImage(this)"
 
     </div>
 
@@ -499,6 +514,8 @@ I had to learn, adapt, and rebuild myself.
 
         <img src="{% static 'portfolio/images/journey/current.jpg' %}"
         alt="Still Growing">
+        class="journey-img"
+onclick="openImage(this)"
 
     </div>
 
@@ -607,6 +624,42 @@ items.forEach(item => observer.observe(item));
         ← Back to Home
     </a>
 </div>
+
+<div id="imageViewer" class="image-viewer" onclick="closeImage()">
+
+    <img id="expandedImage">
+
+</div>
+
+
+<script>
+
+function openImage(image){
+
+    const viewer = document.getElementById("imageViewer");
+
+    const expanded = document.getElementById("expandedImage");
+
+
+    expanded.src = image.src;
+
+
+    viewer.classList.add("active");
+
+}
+
+
+
+function closeImage(){
+
+    document
+    .getElementById("imageViewer")
+    .classList.remove("active");
+
+}
+
+
+</script>
 
 </body>
 
