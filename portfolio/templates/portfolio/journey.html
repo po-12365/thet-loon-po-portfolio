@@ -557,45 +557,45 @@ onclick="openImage(this)">
 </div>
 
 
+</section> <!-- closes journey-wall -->
+
+
 <section class="journey-reflection-card">
 
     <span class="journey-label">
-    MY REFLECTION
+        MY REFLECTION
     </span>
 
 
     <h2>
-    The Journey Is Still Being Written
+        The Journey Is Still Being Written
     </h2>
 
 
     <p>
-
-    Looking back, every challenge has become a lesson,
-    every setback has created a new opportunity, and every
-    person I have met has shaped who I am today.
-
+        Looking back, every challenge has become a lesson,
+        every setback has created a new opportunity, and every
+        person I have met has shaped who I am today.
     </p>
 
 
     <p>
-
-    I truly believe that every experience has a purpose.
-    Even when life does not go according to plan, there is
-    always something to learn if we choose to keep moving
-    forward.
-
+        I truly believe that every experience has a purpose.
+        Even when life does not go according to plan, there is
+        always something to learn if we choose to keep moving
+        forward.
     </p>
 
 
     <p class="journey-reflection">
-
-    This journey is still being written,
-    and I cannot wait to see where it takes me next.
-
+        This journey is still being written,
+        and I cannot wait to see where it takes me next.
     </p>
 
-   </section>
+
+</section>
+
+
 
 <script>
 
@@ -619,22 +619,29 @@ const observer = new IntersectionObserver((entries) => {
 
 });
 
+
 items.forEach(item => observer.observe(item));
 
 </script>
 
 
+
 <div style="text-align:center; margin-top:40px;">
+
     <a href="{% url 'home' %}" class="back-btn">
         ← Back to Home
     </a>
+
 </div>
+
+
 
 <div id="imageViewer" class="image-viewer" onclick="closeImage()">
 
     <img id="expandedImage">
 
 </div>
+
 
 
 <script>
@@ -663,11 +670,6 @@ function closeImage(){
 
 }
 
-
 </script>
-
-
-
-</section>
 
 </body>

@@ -174,7 +174,6 @@ html {
 
 }
 
-
 .journey-line {
 
     position:absolute;
@@ -185,7 +184,7 @@ html {
 
     width:1px;
 
-    height:100%;
+    height:calc(100% - 80px);
 
     background:#cfc8bc;
 
@@ -826,6 +825,29 @@ body {
         #faf8f3 0%,
         #f5f1e8 50%,
         #faf8f3 100%
+    );
+
+}
+
+.journey-wall::after {
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    width:1px;
+
+    height:120px;
+
+    transform:translateX(-50%);
+
+    background:linear-gradient(
+        transparent,
+        #cfc8bc
     );
 
 }
